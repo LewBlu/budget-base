@@ -1,0 +1,17 @@
+mat-card {
+  margin: 1em;
+  padding: 1em;
+}
+
+.dashboard-second-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-second-group > mat-card {
+  flex-grow: 1;
+}
+
+.dashboard-second-group > mat-card > mat-card-content > mat-progress-spinner {
+  margin: 1em;
+}

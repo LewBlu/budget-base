@@ -11,11 +11,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { NavigationComponent } from './navigation/navigation.component';
+import { HeaderComponent } from './navigation/header/header.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		DashboardComponent
+		DashboardComponent,
+		NavigationComponent,
+		HeaderComponent
 	],
 	imports: [
 		BrowserModule,
