@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ProfileComponent } from './authentication/profile/profile.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -23,7 +24,8 @@ import { MatMenuModule } from '@angular/material/menu';
 		AppComponent,
 		DashboardComponent,
 		NavigationComponent,
-		HeaderComponent
+		HeaderComponent,
+		ProfileComponent
 	],
 	imports: [
 		BrowserModule,
