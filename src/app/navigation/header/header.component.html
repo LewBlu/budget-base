@@ -9,7 +9,7 @@
 		<mat-icon mat-button [matMenuTriggerFor]="profileMenu" aria-hidden="false" fontIcon="person"></mat-icon>
 		<mat-menu #profileMenu="matMenu">
 			<button mat-menu-item routerLink="profile">Edit Profile</button>
-			<button mat-menu-item>Logout</button>
+			<button mat-menu-item (click)="onSignOut()">Logout</button>
 		</mat-menu>
 	</div>
 </mat-toolbar>

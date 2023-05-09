@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgChartsModule } from 'ng2-charts';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -23,6 +24,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
 
 // import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
@@ -37,6 +42,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 	],
 	imports: [
 		BrowserModule,
+		ReactiveFormsModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		MatToolbarModule,
@@ -47,9 +53,12 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 		MatIconModule,
 		MatMenuModule,
 		MatFormFieldModule,
+		MatButtonModule,
+		MatInputModule,
 		NgChartsModule,
-		provideFirebaseApp(() => initializeApp(environment.firebase)),
-		provideAuth(() => getAuth()),
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFireAuthModule
+		// provideAuth(() => getAuth()),
 		// provideFirestore(() => getFirestore())
 	],
 	providers: [],

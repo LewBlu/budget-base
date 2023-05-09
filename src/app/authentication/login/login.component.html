@@ -1,17 +1,17 @@
 <div id="login-wrapper">
 	<mat-card>
 		<mat-card-content>
-			<form>
+			<h1 style="text-align: center">Welcome to budget-base</h1>
+			<form [formGroup]="loginForm" (ngSubmit)="onLogin()" style="display: flex; flex-direction: column;">
 				<mat-form-field appearance="fill">
 					<mat-label>Enter your email</mat-label>
-					<input matInput required>
-					<!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+					<input matInput type="text" placeholder="user@example.com" formControlName="email" required>
 				</mat-form-field>
 				<mat-form-field appearance="fill">
 					<mat-label>Enter your password</mat-label>
-					<input matInput required>
-					<!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+					<input matInput type="password" formControlName="password" required>
 				</mat-form-field>
+				<button mat-raised-button color="primary" style="align-self: flex-end;">Login</button>
 			</form>
 		</mat-card-content>
 	</mat-card>
