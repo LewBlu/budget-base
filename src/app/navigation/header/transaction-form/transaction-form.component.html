@@ -1,0 +1,28 @@
+<mat-card>
+	<mat-card-content>
+		<h1 style="text-align: center">Add Transaction</h1>
+		<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column;">
+			<mat-form-field appearance="fill">
+				<mat-label>Transaction</mat-label>
+				<input matInput type="text" formControlName="transaction" required>
+			</mat-form-field>
+			<mat-form-field appearance="fill" formControlName="category" required>
+				<mat-label>Category</mat-label>
+				<mat-select>
+					<mat-option value="Bills">Bills</mat-option>
+					<mat-option value="Entertainment">Entertainment</mat-option>
+					<mat-option value="Expenses">Expenses</mat-option>
+					<mat-option value="Holidays">Holidays</mat-option>
+					<mat-option value="Shopping">Shopping</mat-option>
+					<mat-option value="Travel">Travel</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<mat-form-field appearance="fill">
+				<mat-label>Amount</mat-label>
+				<span matTextPrefix style="margin-right:10px;">£</span>
+				<input matInput type="number" formControlName="amount" required>
+			</mat-form-field>
+			<button mat-raised-button color="primary" style="align-self: flex-end;">Add Transaction</button>
+		</form>
+	</mat-card-content>
+</mat-card>

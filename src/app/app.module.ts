@@ -5,9 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgChartsModule } from 'ng2-charts';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth, getAuth } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -28,6 +26,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TransactionFormComponent } from './navigation/header/transaction-form/transaction-form.component';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 // import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
@@ -38,7 +40,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 		NavigationComponent,
 		HeaderComponent,
 		ProfileComponent,
-		LoginComponent
+		LoginComponent,
+		TransactionFormComponent
 	],
 	imports: [
 		BrowserModule,
@@ -55,10 +58,12 @@ import { AngularFireModule } from '@angular/fire/compat';
 		MatFormFieldModule,
 		MatButtonModule,
 		MatInputModule,
+		MatSelectModule,
+		MatOptionModule,
+		MatDialogModule,
 		NgChartsModule,
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireAuthModule
-		// provideAuth(() => getAuth()),
 		// provideFirestore(() => getFirestore())
 	],
 	providers: [],

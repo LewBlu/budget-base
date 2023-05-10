@@ -3,7 +3,7 @@
 	<div>
 		<mat-icon mat-button [matMenuTriggerFor]="menu" aria-hidden="false" fontIcon="add"></mat-icon>
 		<mat-menu #menu="matMenu">
-			<button mat-menu-item>Add Transaction</button>
+			<button mat-menu-item (click)="openTransactionDialog()">Add Transaction</button>
 			<button mat-menu-item>Add Goal</button>
 		</mat-menu>
 		<mat-icon mat-button [matMenuTriggerFor]="profileMenu" aria-hidden="false" fontIcon="person"></mat-icon>
