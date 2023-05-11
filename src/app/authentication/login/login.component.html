@@ -11,6 +11,7 @@
 					<mat-label>Enter your password</mat-label>
 					<input matInput type="password" formControlName="password" required>
 				</mat-form-field>
+				<p class="mat-error" *ngIf="showError">*Incorrect email address or password</p>
 				<button mat-raised-button color="primary" style="align-self: flex-end;">Login</button>
 			</form>
 		</mat-card-content>

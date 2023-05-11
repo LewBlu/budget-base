@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 	constructor(private auth: AngularFireAuth, private router: Router) { }
-
+	showError: boolean = false;
 	loginForm = new FormGroup({
 		email: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
 		password: new FormControl('', { nonNullable: true, validators: [Validators.required] })
@@ -22,7 +22,7 @@ export class LoginComponent {
 			const password = this.loginForm.get('password')!.value;
 			this.auth.signInWithEmailAndPassword(email, password).then(userCred => {
 				this.router.navigate(['/']);
-			}).catch(error => console.log('An error has occured:', error));
+			}).catch(error => this.showError = true);
 		}
 	}
 }
