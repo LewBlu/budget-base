@@ -25,6 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
 	declarations: [
@@ -43,8 +44,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireAuthModule,
 		// Angular Material Components
-		MatSelectModule,
 		MatFormFieldModule,
+		MatInputModule,
+		MatSelectModule,
 		MatToolbarModule,
 		MatCardModule,
 		MatIconModule,

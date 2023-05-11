@@ -6,9 +6,9 @@
 				<mat-label>Transaction</mat-label>
 				<input matInput type="text" formControlName="transaction" required>
 			</mat-form-field>
-			<mat-form-field appearance="fill" formControlName="category" required>
+			<mat-form-field appearance="fill">
 				<mat-label>Category</mat-label>
-				<mat-select>
+				<mat-select formControlName="category" required>
 					<mat-option value="Bills">Bills</mat-option>
 					<mat-option value="Entertainment">Entertainment</mat-option>
 					<mat-option value="Expenses">Expenses</mat-option>
