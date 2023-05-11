@@ -10,6 +10,34 @@ mat-card {
   flex-grow: 1;
 }
 
+canvas.yearly-spends {
+  height: 300px !important;
+  width: 100% !important;
+}
+
+p.list-item-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget-goals {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.budget-goals > .first-goal-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.budget-goals > .second-goal-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @media only screen and (max-width: 768px) {
   .dashboard-second-group {
     display: flex;
